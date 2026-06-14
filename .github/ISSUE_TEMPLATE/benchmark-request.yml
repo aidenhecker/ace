@@ -1,0 +1,36 @@
+name: Benchmark request
+description: Propose a new corpus or memory strategy to add
+labels: ["benchmark-request"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What are you proposing
+      options:
+        - New corpus
+        - New strategy
+        - Both
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: For a corpus — the public source + what it stresses. For a strategy — the method + what it should reveal.
+      placeholder: "Corpus: Zendesk-style support threads (public sample) — stresses long multi-turn recall..."
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Public source URL (corpus only)
+      placeholder: "https://..."
+  - type: checkboxes
+    id: ack
+    attributes:
+      label: Ground rules
+      options:
+        - label: The source is public and license-compatible
+          required: true
+        - label: I understand numbers must come from a real run — no fabrication
+          required: true

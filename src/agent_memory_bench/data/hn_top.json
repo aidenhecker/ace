@@ -1,0 +1,403 @@
+{
+"name": "hn_top",
+"source": "https://hacker-news.firebaseio.com/v0",
+"fetched_at": "2026-06-14T20:09:27Z",
+"documents": [
+{
+"id": "hn/48460762",
+"text": "Show HN: 3D print Z reinforcement via injected loops\n\nCommodity FDM print strength is limited by poor Z-axis layer bonding. Parts crack along Z under stress. MAGMA tries to fix this in software that works on any FDM 3D printer.<p>It&#x27;s a fork of OrcaSlicer with a new infill type that creates paired U-shaped vertical channels inside the print, plus G-code that injects molten plastic into those channels to bridge Z layer interfaces with continuous plastic.<p>Big caveat: I have a junky Ender 3 and haven&#x27;t gotten a clean physical print yet. Don&#x27;t expect this to work out of the box! After months of tinkering, I&#x27;m releasing the software so the 3DP community can experiment with nozzles, multi-material, weird hardware, and other print parameters I can&#x27;t. There&#x27;s around 40 MAGMA-specific settings to fiddle with, plus some general quality-of-life features (e.g. printing thin infill sections as solid, and a &quot;dual infill shell&quot; feature that applies MAGMA only to the outer shell to save print time).<p>THIS CODE IS ALPHA. Around 50 prints old. The injection G-code is novel. Some printer firmware won&#x27;t like extruding without movement. In extreme cases it could damage your printer or start a fire. DON&#x27;T WALK AWAY WHILE PRINTING.<p>Why MAGMA? &quot;Lava tubes&quot; is a misnomer. Molten rock is magma underground, lava only after it surfaces. The injected tubes are buried inside the print, so &quot;magma tubes&quot; is the correct term."
+},
+{
+"id": "hn/48462759",
+"text": "Pyodide 314.0: Python packages can now publish WebAssembly wheels to PyPI"
+},
+{
+"id": "hn/48465890",
+"text": "Automating myself out of development"
+},
+{
+"id": "hn/48467437",
+"text": "Appreciating Exif"
+},
+{
+"id": "hn/48470746",
+"text": "The Neat Little Vehicles That Run a Cemetery"
+},
+{
+"id": "hn/48471638",
+"text": "Firewood Splitting Simulator"
+},
+{
+"id": "hn/48474982",
+"text": "Quivers: A year of linear algebra by drawing arrows"
+},
+{
+"id": "hn/48479008",
+"text": "The state of building user interfaces in Rust"
+},
+{
+"id": "hn/48481400",
+"text": "Show HN: I am building a map of people who lived in the Roman Empire\n\nDriving home from work one day, I wanted to know how many people we knew the names of who lived during the Roman era. Searching around, I found lists of Consuls and officials, but nothing that covered ordinary people or even most people like freedmen and slaves. So I ended up building a pipeline to process the more than 500k Latin inscriptions in the Epigraphic Database Clauss-Slaby <a href=\"https:&#x2F;&#x2F;edcs.hist.uzh.ch&#x2F;en&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;edcs.hist.uzh.ch&#x2F;en&#x2F;</a> and extract the names of people (and attempt to cluster them, but this is a work in progress).<p>There are databases where Classicists have done this manually for specific regions, Trismegistos <a href=\"https:&#x2F;&#x2F;www.trismegistos.org&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.trismegistos.org&#x2F;</a> and Latin Inscriptions of the Roman Empire (LIRE) <a href=\"https:&#x2F;&#x2F;pure.au.dk&#x2F;portal&#x2F;en&#x2F;publications&#x2F;latin-inscriptions-of-the-roman-empire-lire&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;pure.au.dk&#x2F;portal&#x2F;en&#x2F;publications&#x2F;latin-inscriptions...</a> are two major efforts I found. But there doesn&#x27;t seem to be a project that did what I set out to do, although I have read in some places that it was believed to be possible.<p>I am not a classicist or a web developer, but I have Claude and Gemini and I can sort of read basic Latin - so I set to work. I used LIRE and another database as ground truth and built a pipeline to extract and process the inscriptions to recover the names. The process I developed uses a high end LLM like Sonnet or Gemini Pro to supervise the extraction and tuning process on a regional basis until the obvious error rate is reasonable. For this, so far, reasonable to me means less than 1-2% in the smaller initial samples of 100-500 and no observed systemic issues. The different regions often need different prompts, so this basically became an exercise in letting the higher level AI tune the prompt for the lower level AI. The extraction when measured against LIRE produces an F1 score between 0.64 and 0.87, but take this with a grain of salt.<p>Once I had done a few regions, I wanted to see the work, so I threw together a pretty crude website but as I am not a web developer, it was crude in how it accessed its data. It does look cool and I also added summarization, and machine translation to each entry. I wanted to eventually get feedback from an actual team of classicists and make the website work better, so I am rewriting it as we speak but it is broadly functional now with a few extra bugs but substantially improved performance compared to the old one. All entries link back to the proper sources, and the old web app linked to several additional sources where the data was present, but I haven&#x27;t gotten that working again just yet on the new one. (The old web interface is still available at <a href=\"https:&#x2F;&#x2F;roman-names.com\" rel=\"nofollow\">https:&#x2F;&#x2F;roman-names.com</a>, but I will warn you it is clunky and not mobile friendly at all)<p>Key findings so far:<p>AI supervised AI extraction saved me time. I was manually tuning things for a while and then the runbook became an idea that I feed my instructions in and let the big AI go with sparse oversight from me.<p>The extraction improved significantly (by about 10 F1 points) when I fed the model the raw text including the markers, vs a cleaned up version of the text.<p>I just thought it was a cool little project and wanted to share. If you happen to work in any adjacent space and there is something I could do better etc let me know."
+},
+{
+"id": "hn/48481546",
+"text": "A whale necropolis has been found"
+},
+{
+"id": "hn/48483841",
+"text": "LaserWriter seeds"
+},
+{
+"id": "hn/48485277",
+"text": "Inverse Rubric Optimization: A testbed for agent science"
+},
+{
+"id": "hn/48489309",
+"text": "USB Power Delivery: Plugging into the Benefits"
+},
+{
+"id": "hn/48489636",
+"text": "Segmented type appreciation corner (2018)"
+},
+{
+"id": "hn/48490927",
+"text": "FreeOberon – Open-Source, Cross-Platform, Free Pascal/Turbo Pascal-Like Language"
+},
+{
+"id": "hn/48491048",
+"text": "Lisp's Influence on Ruby"
+},
+{
+"id": "hn/48491968",
+"text": "Resurrecting a soaked, corroded, and damaged Commodore SX‑64 (2025)"
+},
+{
+"id": "hn/48492822",
+"text": "The only scalable delete in Postgres is DROP TABLE"
+},
+{
+"id": "hn/48494135",
+"text": "Beagle: Git, URIs and all the dirty words"
+},
+{
+"id": "hn/48497195",
+"text": "Codex for open source"
+},
+{
+"id": "hn/48497609",
+"text": "If you are asking for human attention, demonstrate human effort"
+},
+{
+"id": "hn/48498705",
+"text": "Raress96/Dolby-Atmos-encoder: PoC Dolby Atmos encoder"
+},
+{
+"id": "hn/48499348",
+"text": "Historic co-determination helps monasteries navigate digital change"
+},
+{
+"id": "hn/48503009",
+"text": "Python 3.14 garbage collection rigamarole"
+},
+{
+"id": "hn/48505231",
+"text": "CRISPR tech selectively shreds cancer cells, including \"undruggable\" cancers"
+},
+{
+"id": "hn/48506545",
+"text": "Launch HN: BitBoard (YC P25) – Analytics Workspace for Agents\n\nWe’re Connor and Ambar from BitBoard (<a href=\"https:&#x2F;&#x2F;bitboard.work\">https:&#x2F;&#x2F;bitboard.work</a>). BitBoard is an agentic analytics workspace. We give you the infrastructure and visualization layer to analyze data with AI.<p>Today, we’re launching dashboards that you and your agents can work on together. You can connect your coding agent or AI chat to BitBoard and build live reporting. Here’s a demo: <a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=HPl0K565a7c\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=HPl0K565a7c</a>.<p>AI tools treat data analysis as ephemeral, making it hard to report or collaborate. Legacy BI tools weren’t intended for AI users, so they bolt on chatbots and can’t offer meaningful control to your agents. Software can now make far more of a business legible than BI ever could, but neither legacy BI nor chat bots are built to handle it.<p>Our original product was AI agents for administrative tasks in healthcare (<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=44237769\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=44237769</a>), but customers kept pulling us toward their data analysis problems: queries scattered across disparate sources, spreadsheets floating everywhere. We kept building tooling for addressing that, and at a certain point those tools were becoming our product.<p>We ran into several problems. Agents made bad inferences because they had no context on the business. They couldn&#x27;t be trusted to make decisions because nothing checked their work. And anything one agent or one person figured out was invisible to everyone else. In BitBoard, humans and agents interact with the same data primitives but get tools designed for their own work.<p>We’re building dashboards to make the human reading experience better. These dashboards progressively use intelligence - starting from code or SQL queries and leading to full embedded apps. Humans and agents will need to agree on methods to interpret data, so we’re letting both contribute to canonical sources, entities, and measures (using your favorite semantic model or ours). Every answer comes with provenance, and the same call with the same parameters returns the same number.<p>Looking ahead, these shared primitives let long-running agents operate inside a business, and we&#x27;re building those agents too. An agent needs a measurable goal and a way to verify its work. BitBoard gives it both. The agent takes a problem like a metric drifting or a funnel leaking and figures out what to do next. Its work becomes datasets, dashboards, and traces that the team can observe and sign off on.<p>Technically, we’re building a collaboration engine with isomorphic updates for humans and AI, columnar analysis (we use DuckDB and Apache Arrow), grounding and verification infrastructure, and enabling long running tasks with agent containers and traces. For agentic work we’re big fans of applying LLM judgement to discover problems, and then generating deterministic software to automate them.<p>Try it out at <a href=\"https:&#x2F;&#x2F;app.bitboard.work\">https:&#x2F;&#x2F;app.bitboard.work</a>. (We require an email so we can set up your account).<p>We’re excited about how data analysis and science can change in the age of LLMs, and welcome all your thoughts!"
+},
+{
+"id": "hn/48510010",
+"text": "Electric motors with no rare earths"
+},
+{
+"id": "hn/48514560",
+"text": "Israeli firm BlackCore suspected of meddling in New York and Scotland votes"
+},
+{
+"id": "hn/48515336",
+"text": "A low-carbon computing platform from your retired phones"
+},
+{
+"id": "hn/48515385",
+"text": "Show HN: Paca – Lightweight Jira alternative for human-AI collaboration\n\nI built Paca out of pure passion—a free and lightweight Jira alternative written in Go where humans and AI agents work together as equal teammates to plan sprints and assign tasks to each other. It is fully customizable with custom views, fields, and a WASM-based plugin architecture. My team uses it daily for our own development, so it will be continuously maintained and completely free forever"
+},
+{
+"id": "hn/48515454",
+"text": "RTX 5080 and RTX 3090 Setup: 80 Tok/s on Qwen 3.6 27B Q8"
+},
+{
+"id": "hn/48516251",
+"text": "Every Frame Perfect"
+},
+{
+"id": "hn/48516504",
+"text": "AI OSS tool repo goes archived over night after raising $7.3M Seed"
+},
+{
+"id": "hn/48516710",
+"text": "The experience of rendering Arabic typography and its technical debt"
+},
+{
+"id": "hn/48517199",
+"text": "New pancreatic cancer drug might open the door to much longer survival times\n\n<a href=\"https:&#x2F;&#x2F;clinicaltrials.gov&#x2F;study&#x2F;NCT06625320\" rel=\"nofollow\">https:&#x2F;&#x2F;clinicaltrials.gov&#x2F;study&#x2F;NCT06625320</a><p><a href=\"https:&#x2F;&#x2F;archive.ph&#x2F;d4mT2\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.ph&#x2F;d4mT2</a>"
+},
+{
+"id": "hn/48517377",
+"text": "Noise infusion banned from statistical products published by Census Bureau"
+},
+{
+"id": "hn/48517412",
+"text": "Orthodox C++ (2016)"
+},
+{
+"id": "hn/48518684",
+"text": "GLM 5.2 Is Out\n\n<a href=\"https:&#x2F;&#x2F;digg.com&#x2F;tech&#x2F;ii9xibgn\" rel=\"nofollow\">https:&#x2F;&#x2F;digg.com&#x2F;tech&#x2F;ii9xibgn</a>"
+},
+{
+"id": "hn/48518969",
+"text": "AI coding at home without going broke"
+},
+{
+"id": "hn/48519011",
+"text": "The adder at the heart of Intel's 8087 floating-point chip"
+},
+{
+"id": "hn/48519092",
+"text": "Amazon CEO's talks with U.S. officials triggered crackdown on Anthropic models\n\n<a href=\"https:&#x2F;&#x2F;www.wsj.com&#x2F;tech&#x2F;ai&#x2F;amazon-ceos-talks-with-u-s-officials-triggered-crackdown-on-anthropic-models-dcc90578?st=Yct6gx&amp;reflink=desktopwebshare_permalink\" rel=\"nofollow\">https:&#x2F;&#x2F;www.wsj.com&#x2F;tech&#x2F;ai&#x2F;amazon-ceos-talks-with-u-s-offic...</a>"
+},
+{
+"id": "hn/48519102",
+"text": "Global density and biomass of arbuscular mycorrhizal fungal networks"
+},
+{
+"id": "hn/48519552",
+"text": "GameBoy Workboy"
+},
+{
+"id": "hn/48520080",
+"text": "Running DOS on Behringers DDX3216 with a DIY x86-Bios from Scratch"
+},
+{
+"id": "hn/48520807",
+"text": "Police officer investigated for using AI to 'create evidence' in multiple cases"
+},
+{
+"id": "hn/48521236",
+"text": "Show HN: Trace – Offline Mac meeting transcripts you can flag mid-call\n\nI&#x27;m the developer of Trace, a non-intrusive, shortcut-driven Mac app that records and transcribes your meetings on-device. I know, another meeting transcription app. Please bear with me though, I&#x27;m confident that this is at least a little novel.<p>I primarily built Trace for myself. I&#x27;d been using MacWhisper, but there was enough fiddling before each call that I&#x27;d forget to start it and walk out of an hour-long meeting with nothing written down. So the things I cared about most were that it&#x27;s quick to activate and stays out of the way. You activate Trace by pressing a global shortcut (configurable), which reveals a small bar at the bottom of your screen (there&#x27;s also a keystroke and&#x2F;or option to hide it entirely if you&#x27;d rather not see it at all).<p>As I was building it I wanted to bake in a couple of workflows I&#x27;d wished for in other transcription apps.<p>1. Mid-meeting you can press another global shortcut to mark a &quot;key moment&quot; and type a note. The note shows up in the resulting transcript inline at that timestamp. I wanted to add this because I kept catching myself thinking &quot;wait, that bit matters&quot; in meetings and reaching to jot it down in a separate app like Obsidian, which I then needed to add context to, which took me out of the meeting. I use it all the time. If I paste the transcript into an LLM afterwards (which I find myself doing more and more these days) the important moments are flagged so it doesn&#x27;t gloss over them. This is more noticeable in longer meetings with lots of topics.\n2. With another keyboard shortcut you can summon a rough live recap (subtitles, basically) to quickly recap what&#x27;s just been said.<p>Trace uses standard macOS microphone and system recording APIs to capture both sides of the conversation as two separate tracks and then runs the system side through on-device diarization to identify speakers. Right now we only label them as &quot;Speaker 1&quot;, &quot;Speaker 2&quot;, etc but there are plans for speaker labelling in the future. You can also show a &quot;live recap&quot; as the call is happening to review what someone just said.<p>All transcription models run on your machine. To be clear though, Trace doesn&#x27;t do any of the summarising itself, it just produces a markdown transcript, so if you want summaries then you need to pass the output to an AI.<p>The app is sandboxed and your audio&#x2F;transcripts are never uploaded anywhere - they just exist as audio files and markdown on disk. The only network call Trace is required to make is on the first run to download the speech and speaker models (around 500MB) from Hugging Face, and after that it can be used fully offline. If enabled, a Google Calendar integration can auto-name sessions but that needs a network connection.<p>The app is £9.99 on the macOS App Store. I&#x27;ve been using it every day for months now and I&#x27;m super happy with how it&#x27;s improved my workflow. Feedback very welcome."
+},
+{
+"id": "hn/48521709",
+"text": "Human Routers of Machine Words"
+},
+{
+"id": "hn/48522310",
+"text": "Ancient genome duplications laid the foundations of complex brains"
+},
+{
+"id": "hn/48522486",
+"text": "ReactOS (FOSS \"Windows\") achieves 3D-accelerated Half-Life on real hardware"
+},
+{
+"id": "hn/48523054",
+"text": "The Difference Between Rest and Idleness"
+},
+{
+"id": "hn/48523080",
+"text": "Honda Civics and the Evil Valet\n\nPreviously: <i>Show HN: Honda Civic Infotainment Reverse-Engineering</i> - <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=36052753\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=36052753</a> - May 2023 (43 comments)"
+},
+{
+"id": "hn/48523550",
+"text": "Apt Encounters of the Third Kind (2021)"
+},
+{
+"id": "hn/48523615",
+"text": "Building a serial and VGA \"everything console\""
+},
+{
+"id": "hn/48523664",
+"text": "Show HN: Bastion – isolated Linux VMs for background coding agents"
+},
+{
+"id": "hn/48523752",
+"text": "Making Claude a Chemist"
+},
+{
+"id": "hn/48523768",
+"text": "Half-Life able to run on ReactOS"
+},
+{
+"id": "hn/48523992",
+"text": "Free SQL→ER diagram tool, runs in the browser, nothing uploaded"
+},
+{
+"id": "hn/48524084",
+"text": "Software Architecture Guide (2019)"
+},
+{
+"id": "hn/48524135",
+"text": "Pac-Man, but you're the ghost"
+},
+{
+"id": "hn/48524293",
+"text": "Phoenix LiveView 1.2"
+},
+{
+"id": "hn/48524434",
+"text": "Tribblix: The retro Illumos distribution"
+},
+{
+"id": "hn/48524620",
+"text": "Don't trust large context windows"
+},
+{
+"id": "hn/48525762",
+"text": "30 years of OpenBSD development, visualized"
+},
+{
+"id": "hn/48526193",
+"text": "Reinventing Control Theory One Feature at a Time: The Fallacy of Agentic Loops"
+},
+{
+"id": "hn/48526360",
+"text": "How to earn a billion dollars"
+},
+{
+"id": "hn/48526439",
+"text": "Swiss voters rejected 10M population cap proposal"
+},
+{
+"id": "hn/48526472",
+"text": "Can't Stop the Signal. Poison It"
+},
+{
+"id": "hn/48526633",
+"text": "Formal methods and the future of programming"
+},
+{
+"id": "hn/48526661",
+"text": "The Birth and Death of JavaScript (2014)"
+},
+{
+"id": "hn/48526793",
+"text": "How did Atari apply side art to Arcade Cabinets?"
+},
+{
+"id": "hn/48527040",
+"text": "Arch Linux AUR Hit by Another Wave of Now More Sophisticated Malware Attack"
+},
+{
+"id": "hn/48527145",
+"text": "Caddy compatibility for zeroserve: 3x throughput and 70% lower latency"
+},
+{
+"id": "hn/48527297",
+"text": "KPMG pulls report on AI usage due to apparent hallucinations"
+},
+{
+"id": "hn/48527360",
+"text": "FarOutCompany"
+},
+{
+"id": "hn/48527377",
+"text": "Conversations with a six-year-old on functional programming (2018)"
+},
+{
+"id": "hn/48527533",
+"text": "Extinction-Level Capitalism"
+},
+{
+"id": "hn/48527623",
+"text": "Show HN: Dual YOLOv8n UAV Detection on RK3588S at 42 FPS Using NPU"
+},
+{
+"id": "hn/48527634",
+"text": "Rio de Janeiro's city government model Rio3.5 beats Qwen3.7 in recent benchmarks"
+},
+{
+"id": "hn/48527658",
+"text": "A 'cold blob' in the Atlantic could be a sign of AMOC shutdown"
+},
+{
+"id": "hn/48527700",
+"text": "No, everyone is not using AI for everything"
+},
+{
+"id": "hn/48527731",
+"text": "Dangerous hormone-disrupting chemicals found in US breast milk samples"
+},
+{
+"id": "hn/48527766",
+"text": "UK set to announce social media ban for under-16s"
+},
+{
+"id": "hn/48527820",
+"text": "Perlisisms"
+},
+{
+"id": "hn/48527826",
+"text": "Starmer to announce social media curfew and chatbot ban for teenagers"
+},
+{
+"id": "hn/48528029",
+"text": "I indexed 669 GB of my GoPro videos using my M1 Max computer and local ML models\n\nTLDR: I had 2,207 GoPro videos, and I need to rewatch them to find interesting moments from my cycling journey. I built a project to index them locally on my M1 Max using open-source ML models, search for those moments, and send the best clips straight to my DaVinci Resolve timeline.  I indexed 628 videos (668.68 GB, 15h 13m 18s of footage duration), more details in the metrics table in the last section of this article.<p>Full article: https:&#x2F;&#x2F;iliashaddad.com&#x2F;blog&#x2F;i-indexed-669-gb-of-my-gopro-videos-using-my-m1-max-computer"
+},
+{
+"id": "hn/48528371",
+"text": "Rio de Janeiro's \"homegrown\" LLM appears to be a merge of an existing model"
+},
+{
+"id": "hn/48528729",
+"text": "Linux 7.1"
+},
+{
+"id": "hn/48528779",
+"text": "Ask HN: What are you working on? (June 2026)\n\nWhat are you working on? Any new ideas that you&#x27;re thinking about?"
+},
+{
+"id": "hn/48529149",
+"text": "Swiss voters reject proposal to cap population at ten million"
+},
+{
+"id": "hn/48529645",
+"text": "Dillo directory – Directory of useful sites that work reasonably well on Dillo"
+},
+{
+"id": "hn/48529990",
+"text": "Show HN: Kage – Shadow any website to a single binary for offline viewing"
+},
+{
+"id": "hn/48530270",
+"text": "Oracle is changing free tier limits. Update by the 15th to avoid charges"
+},
+{
+"id": "hn/48530290",
+"text": "A clear fishing wire is tied around the island of Manhattan"
+},
+{
+"id": "hn/48530682",
+"text": "Swiss voters reject proposal to cap Population at 10M"
+},
+{
+"id": "hn/48530841",
+"text": "Rome Fell and Nobody Noticed"
+},
+{
+"id": "hn/48530952",
+"text": "Dallas mural cover-up led to a $25M lawsuit against FIFA"
+},
+{
+"id": "hn/48531211",
+"text": "Anthropic staff to meet White House officials next week"
+},
+{
+"id": "hn/48531449",
+"text": "Chaosnet"
+},
+{
+"id": "hn/48531568",
+"text": "KPMG report on AI found riddled with AI hallucinations"
+}
+]
+}
