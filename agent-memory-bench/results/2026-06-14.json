@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "tokenizer": "tiktoken/cl100k_base",
+    "tokenizer_note": "approximation of Anthropic tokenization; ratios are tokenizer-robust",
+    "pricing_model": "claude-sonnet-4-6",
+    "assumed_answer_tokens": 200,
+    "recall_ks": [
+      1,
+      5,
+      10
+    ],
+    "n_questions": 50
+  },
+  "corpora": {
+    "anthropic_docs": {
+      "n_docs": 20,
+      "n_questions": 20,
+      "source": "https://platform.claude.com/docs/en/",
+      "fetched_at": "2026-06-14T20:09:23Z",
+      "strategies": {
+        "raw": {
+          "context_tokens": 224377,
+          "tokens_out": 200,
+          "cost_usd_per_query": 0.676131,
+          "recall_at_1": 0.25,
+          "recall_at_5": 0.5,
+          "recall_at_10": 0.9
+        },
+        "claude_mem": {
+          "context_tokens": 927,
+          "tokens_out": 200,
+          "cost_usd_per_query": 0.005781,
+          "recall_at_1": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0
+        },
+        "ace": {
+          "context_tokens": 446,
+          "tokens_out": 200,
+          "cost_usd_per_query": 0.004338,
+          "recall_at_1": 0.45,
+          "recall_at_5": 0.7,
+          "recall_at_10": 0.8
+        }
+      },
+      "compression_ratio_raw_over_ace": 503.1
+    },
+    "kernel_log": {
+      "n_docs": 100,
+      "n_questions": 50,
+      "source": "api.github.com/torvalds/linux",
+      "fetched_at": "2026-06-14T20:09:25Z",
+      "strategies": {
+        "raw": {
+          "context_tokens": 29130,
+          "tokens_out": 200,
+          "cost_usd_per_query": 0.09039,
+          "recall_at_1": 0.6,
+          "recall_at_5": 0.98,
+          "recall_at_10": 0.98
+        },
+        "claude_mem": {
+          "context_tokens": 6084,
+          "tokens_out": 200,
+          "cost_usd_per_query": 0.021252,
+          "recall_at_1": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0
+        },
+        "ace": {
+          "context_tokens": 454,
+          "tokens_out": 200,
+          "cost_usd_per_query": 0.004362,
+          "recall_at_1": 0.16,
+          "recall_at_5": 0.36,
+          "recall_at_10": 0.42
+        }
+      },
+      "compression_ratio_raw_over_ace": 64.2
+    },
+    "hn_top": {
+      "n_docs": 99,
+      "n_questions": 50,
+      "source": "https://hacker-news.firebaseio.com/v0",
+      "fetched_at": "2026-06-14T20:09:27Z",
+      "strategies": {
+        "raw": {
+          "context_tokens": 4690,
+          "tokens_out": 200,
+          "cost_usd_per_query": 0.01707,
+          "recall_at_1": 0.9,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0
+        },
+        "claude_mem": {
+          "context_tokens": 1765,
+          "tokens_out": 200,
+          "cost_usd_per_query": 0.008295,
+          "recall_at_1": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0
+        },
+        "ace": {
+          "context_tokens": 453,
+          "tokens_out": 200,
+          "cost_usd_per_query": 0.004359,
+          "recall_at_1": 0.86,
+          "recall_at_5": 0.98,
+          "recall_at_10": 1.0
+        }
+      },
+      "compression_ratio_raw_over_ace": 10.4
+    }
+  }
+}
